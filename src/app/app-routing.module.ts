@@ -13,8 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'ligin',
-    loadChildren: () => import('./pages/ligin/ligin.module').then( m => m.LiginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LiginPageModule)
   },
+  {
+    path: 'paguina',
+    loadChildren: () => import('./pages/paguina/paguina.module').then( m => m.PaguinaPageModule)
+  },
+
 ];
 
 @NgModule({
