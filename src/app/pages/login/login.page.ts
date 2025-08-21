@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,8 @@ export class LiginPage {
   contraseñas: String[] = ["123456", "password"];
   emails: String[] = ["jajaja@gail.com"];
 
+  constructor(private router: Router) {}
+
   //esta funcion se encarga del login
   login() {
     //Verifica si el email existe
@@ -27,8 +30,10 @@ export class LiginPage {
     else if (this.password !== this.contraseñas[emailIndex]) {
       this.errorMessage = 'Contraseña incorrecta para este email';
       return false;
-    }else{
+    } else {
       this.errorMessage = '';
+      // Navega solo si el login es exitoso
+      this.router.navigate(['/paguina']);
       return true;
     }
 

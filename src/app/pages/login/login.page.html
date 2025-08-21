@@ -14,7 +14,7 @@
   <ion-content class="ion-padding">
     <ion-input type="email" label="email" [(ngModel)]="email"></ion-input>
     <ion-input type="password" label="contraseña" [(ngModel)]="password"></ion-input>
-    <ion-button expand="block" (click)="login()" (click)="consola()" [routerLink]="['/paguina']">iniciar sesión </ion-button>
+    <ion-button expand="block" (click)="consola(); login()">iniciar sesión </ion-button>
     <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
   </ion-content>
 </ion-content>
