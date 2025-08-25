@@ -1,18 +1,31 @@
 .parent {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 6px; 
-  height: 70vh; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 6px;
+  height: 70vh;
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 2; background: #ffd164; border: 2px solid #fff; }
-.div2 { grid-area: 1 / 1 / 3 / 4; background: #ffd164; border: 2px solid #fff; }
-.div3 { grid-area: 1 / 4 / 2 / 5; background: #ffd164; border: 2px solid #fff; }
-.div4 { grid-area: 1 / 4 / 6 / 6; background: #ffd164; border: 2px solid #fff; }
-.div5 { grid-area: 3 / 1 / 4 / 2; background: #ffd164; border: 2px solid #fff; }
-.div6 { grid-area: 3 / 1 / 6 / 4; background: #ffd164; border: 2px solid #fff; }
+.div1 {
+  grid-area: 1 / 1 / 2 / 4; /* Primera fila, columnas 1 a 3 */
+  background: #ffd164;
+  border: 2px solid #fff;
+}
 
-.div1, .div2, .div3, .div4, .div5, .div6 {
-  border-radius: 16px;
+.div2 {
+  grid-area: 2 / 1 / 3 / 4; /* Segunda fila, columnas 1 a 3 */
+  background: #ffd164;
+  border: 2px solid #fff;
+}
+
+.div1, .div2{
+  border-radius: 10px;
+}
+
+.lista {
+  width: 100%;
+  max-width: 400px;         /* Opcional: controla el ancho de la lista */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centra los ion-item dentro de la lista */
 }
